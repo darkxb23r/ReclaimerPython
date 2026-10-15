@@ -1,0 +1,947 @@
+[
+  {
+    "group": "admin_announcement",
+    "method": "announcement_settings",
+    "verb": "GET",
+    "path": "/api/admin/announcement",
+    "operation_id": "announcement_settings_api_admin_announcement_get",
+    "return_type": "models.AnnouncementResponse",
+    "kind": "json"
+  },
+  {
+    "group": "admin_announcement",
+    "method": "update_announcement",
+    "verb": "PUT",
+    "path": "/api/admin/announcement",
+    "operation_id": "update_announcement_api_admin_announcement_put",
+    "return_type": "models.AnnouncementResponse",
+    "kind": "json"
+  },
+  {
+    "group": "admin_announcement",
+    "method": "admin_image",
+    "verb": "GET",
+    "path": "/api/admin/announcement/image/{image_id}",
+    "operation_id": "admin_image_api_admin_announcement_image__image_id__get",
+    "return_type": "bytes",
+    "kind": "bytes"
+  },
+  {
+    "group": "admin_api_activity",
+    "method": "keys",
+    "verb": "GET",
+    "path": "/api/admin/api-activity/keys",
+    "operation_id": "keys_api_admin_api_activity_keys_get",
+    "return_type": "models.AdminApiKeyPage",
+    "kind": "json"
+  },
+  {
+    "group": "admin_api_activity",
+    "method": "key_detail",
+    "verb": "GET",
+    "path": "/api/admin/api-activity/keys/{key_id}",
+    "operation_id": "key_detail_api_admin_api_activity_keys__key_id__get",
+    "return_type": "models.AdminApiKeySummary",
+    "kind": "json"
+  },
+  {
+    "group": "admin_api_activity",
+    "method": "requests",
+    "verb": "GET",
+    "path": "/api/admin/api-activity/requests",
+    "operation_id": "requests_api_admin_api_activity_requests_get",
+    "return_type": "models.AdminApiRequestPage",
+    "kind": "json"
+  },
+  {
+    "group": "admin_audit",
+    "method": "audit_history",
+    "verb": "GET",
+    "path": "/api/admin/audit",
+    "operation_id": "audit_history_api_admin_audit_get",
+    "return_type": "list[models.ModerationAuditResponse]",
+    "kind": "json"
+  },
+  {
+    "group": "admin_favourites",
+    "method": "all_favourites",
+    "verb": "GET",
+    "path": "/api/admin/favourites",
+    "operation_id": "all_favourites_api_admin_favourites_get",
+    "return_type": "list[models.FavouriteCollectionResponse]",
+    "kind": "json"
+  },
+  {
+    "group": "admin_favourites",
+    "method": "create_favourites",
+    "verb": "POST",
+    "path": "/api/admin/favourites",
+    "operation_id": "create_favourites_api_admin_favourites_post",
+    "return_type": "models.FavouriteCollectionResponse",
+    "kind": "json"
+  },
+  {
+    "group": "admin_favourites",
+    "method": "delete_favourites",
+    "verb": "DELETE",
+    "path": "/api/admin/favourites/{collection_id}",
+    "operation_id": "delete_favourites_api_admin_favourites__collection_id__delete",
+    "return_type": "None",
+    "kind": "json"
+  },
+  {
+    "group": "admin_favourites",
+    "method": "favourite_detail",
+    "verb": "GET",
+    "path": "/api/admin/favourites/{collection_id}",
+    "operation_id": "favourite_detail_api_admin_favourites__collection_id__get",
+    "return_type": "models.FavouriteCollectionResponse",
+    "kind": "json"
+  },
+  {
+    "group": "admin_favourites",
+    "method": "update_favourites",
+    "verb": "PUT",
+    "path": "/api/admin/favourites/{collection_id}",
+    "operation_id": "update_favourites_api_admin_favourites__collection_id__put",
+    "return_type": "models.FavouriteCollectionResponse",
+    "kind": "json"
+  },
+  {
+    "group": "admin_listings",
+    "method": "clear_description",
+    "verb": "POST",
+    "path": "/api/admin/listings/{listing_id}/clear-description",
+    "operation_id": "clear_description_api_admin_listings__listing_id__clear_description_post",
+    "return_type": "models.AdminListingSummary",
+    "kind": "json"
+  },
+  {
+    "group": "admin_listings",
+    "method": "remove_listing",
+    "verb": "POST",
+    "path": "/api/admin/listings/{listing_id}/remove",
+    "operation_id": "remove_listing_api_admin_listings__listing_id__remove_post",
+    "return_type": "models.AdminListingSummary",
+    "kind": "json"
+  },
+  {
+    "group": "admin_listings",
+    "method": "restore_listing",
+    "verb": "POST",
+    "path": "/api/admin/listings/{listing_id}/restore",
+    "operation_id": "restore_listing_api_admin_listings__listing_id__restore_post",
+    "return_type": "models.AdminListingSummary",
+    "kind": "json"
+  },
+  {
+    "group": "admin_metrics",
+    "method": "metrics",
+    "verb": "GET",
+    "path": "/api/admin/metrics",
+    "operation_id": "metrics_api_admin_metrics_get",
+    "return_type": "models.AdminMetricsResponse",
+    "kind": "json"
+  },
+  {
+    "group": "admin_metrics",
+    "method": "reset_cooldowns",
+    "verb": "POST",
+    "path": "/api/admin/metrics/reset-cooldowns",
+    "operation_id": "reset_cooldowns_api_admin_metrics_reset_cooldowns_post",
+    "return_type": "models.MetricCooldownResetResponse",
+    "kind": "json"
+  },
+  {
+    "group": "admin_ratings",
+    "method": "remove_rating",
+    "verb": "DELETE",
+    "path": "/api/admin/ratings/{rating_id}",
+    "operation_id": "remove_rating_api_admin_ratings__rating_id__delete",
+    "return_type": "None",
+    "kind": "json"
+  },
+  {
+    "group": "admin_users",
+    "method": "users",
+    "verb": "GET",
+    "path": "/api/admin/users",
+    "operation_id": "users_api_admin_users_get",
+    "return_type": "models.AdminUserPage",
+    "kind": "json"
+  },
+  {
+    "group": "admin_users",
+    "method": "user_detail",
+    "verb": "GET",
+    "path": "/api/admin/users/{user_id}",
+    "operation_id": "user_detail_api_admin_users__user_id__get",
+    "return_type": "models.AdminUserDetail",
+    "kind": "json"
+  },
+  {
+    "group": "admin_users",
+    "method": "ban",
+    "verb": "POST",
+    "path": "/api/admin/users/{user_id}/ban",
+    "operation_id": "ban_api_admin_users__user_id__ban_post",
+    "return_type": "models.AdminUserDetail",
+    "kind": "json"
+  },
+  {
+    "group": "admin_users",
+    "method": "update_role",
+    "verb": "PUT",
+    "path": "/api/admin/users/{user_id}/role",
+    "operation_id": "update_role_api_admin_users__user_id__role_put",
+    "return_type": "models.AdminUserDetail",
+    "kind": "json"
+  },
+  {
+    "group": "admin_users",
+    "method": "unban",
+    "verb": "POST",
+    "path": "/api/admin/users/{user_id}/unban",
+    "operation_id": "unban_api_admin_users__user_id__unban_post",
+    "return_type": "models.AdminUserDetail",
+    "kind": "json"
+  },
+  {
+    "group": "auth",
+    "method": "forgot_password",
+    "verb": "POST",
+    "path": "/api/auth/forgot-password",
+    "operation_id": "forgot_password_api_auth_forgot_password_post",
+    "return_type": "models.StatusResponse",
+    "kind": "json"
+  },
+  {
+    "group": "auth",
+    "method": "login",
+    "verb": "POST",
+    "path": "/api/auth/login",
+    "operation_id": "login_api_auth_login_post",
+    "return_type": "models.UserResponse",
+    "kind": "json"
+  },
+  {
+    "group": "auth",
+    "method": "logout",
+    "verb": "POST",
+    "path": "/api/auth/logout",
+    "operation_id": "logout_api_auth_logout_post",
+    "return_type": "models.StatusResponse",
+    "kind": "json"
+  },
+  {
+    "group": "auth",
+    "method": "register",
+    "verb": "POST",
+    "path": "/api/auth/register",
+    "operation_id": "register_api_auth_register_post",
+    "return_type": "models.UserResponse",
+    "kind": "json"
+  },
+  {
+    "group": "auth",
+    "method": "resend_verification",
+    "verb": "POST",
+    "path": "/api/auth/resend-verification",
+    "operation_id": "resend_verification_api_auth_resend_verification_post",
+    "return_type": "models.StatusResponse",
+    "kind": "json"
+  },
+  {
+    "group": "auth",
+    "method": "reset_password",
+    "verb": "POST",
+    "path": "/api/auth/reset-password",
+    "operation_id": "reset_password_api_auth_reset_password_post",
+    "return_type": "models.StatusResponse",
+    "kind": "json"
+  },
+  {
+    "group": "auth",
+    "method": "verify_email",
+    "verb": "POST",
+    "path": "/api/auth/verify-email",
+    "operation_id": "verify_email_api_auth_verify_email_post",
+    "return_type": "models.UserResponse",
+    "kind": "json"
+  },
+  {
+    "group": "collaboration",
+    "method": "list_collaborators",
+    "verb": "GET",
+    "path": "/api/listings/{listing_id}/collaborators",
+    "operation_id": "list_collaborators_api_listings__listing_id__collaborators_get",
+    "return_type": "list[models.CollaboratorResponse]",
+    "kind": "json"
+  },
+  {
+    "group": "collaboration",
+    "method": "invite",
+    "verb": "POST",
+    "path": "/api/listings/{listing_id}/collaborators",
+    "operation_id": "invite_api_listings__listing_id__collaborators_post",
+    "return_type": "list[models.CollaboratorResponse]",
+    "kind": "json"
+  },
+  {
+    "group": "collaboration",
+    "method": "remove",
+    "verb": "DELETE",
+    "path": "/api/listings/{listing_id}/collaborators/{user_id}",
+    "operation_id": "remove_api_listings__listing_id__collaborators__user_id__delete",
+    "return_type": "None",
+    "kind": "json"
+  },
+  {
+    "group": "collaboration",
+    "method": "pending_invitations",
+    "verb": "GET",
+    "path": "/api/user/me/collaborations",
+    "operation_id": "pending_invitations_api_user_me_collaborations_get",
+    "return_type": "list[models.CollaborationInvitationResponse]",
+    "kind": "json"
+  },
+  {
+    "group": "collaboration",
+    "method": "decline",
+    "verb": "DELETE",
+    "path": "/api/user/me/collaborations/{listing_id}",
+    "operation_id": "decline_api_user_me_collaborations__listing_id__delete",
+    "return_type": "None",
+    "kind": "json"
+  },
+  {
+    "group": "collaboration",
+    "method": "accept",
+    "verb": "POST",
+    "path": "/api/user/me/collaborations/{listing_id}/accept",
+    "operation_id": "accept_api_user_me_collaborations__listing_id__accept_post",
+    "return_type": "None",
+    "kind": "json"
+  },
+  {
+    "group": "developer",
+    "method": "developer_access",
+    "verb": "GET",
+    "path": "/api/developer/access",
+    "operation_id": "developer_access_api_developer_access_get",
+    "return_type": "models.DeveloperAccessResponse",
+    "kind": "json"
+  },
+  {
+    "group": "developer",
+    "method": "developer_guide",
+    "verb": "GET",
+    "path": "/api/developer/guide",
+    "operation_id": "developer_guide_api_developer_guide_get",
+    "return_type": "str",
+    "kind": "text"
+  },
+  {
+    "group": "developer",
+    "method": "keys",
+    "verb": "GET",
+    "path": "/api/developer/keys",
+    "operation_id": "keys_api_developer_keys_get",
+    "return_type": "list[models.ApiKeyResponse]",
+    "kind": "json"
+  },
+  {
+    "group": "developer",
+    "method": "new_key",
+    "verb": "POST",
+    "path": "/api/developer/keys",
+    "operation_id": "new_key_api_developer_keys_post",
+    "return_type": "models.ApiKeyCreatedResponse",
+    "kind": "json"
+  },
+  {
+    "group": "developer",
+    "method": "revoke_key",
+    "verb": "DELETE",
+    "path": "/api/developer/keys/{key_id}",
+    "operation_id": "revoke_key_api_developer_keys__key_id__delete",
+    "return_type": "None",
+    "kind": "json"
+  },
+  {
+    "group": "developer",
+    "method": "scopes",
+    "verb": "GET",
+    "path": "/api/developer/scopes",
+    "operation_id": "scopes_api_developer_scopes_get",
+    "return_type": "list[models.ApiScopeResponse]",
+    "kind": "json"
+  },
+  {
+    "group": "documentation",
+    "method": "swagger_ui",
+    "verb": "GET",
+    "path": "/api/docs",
+    "operation_id": "swagger_ui",
+    "return_type": "str",
+    "kind": "text"
+  },
+  {
+    "group": "documentation",
+    "method": "openapi_schema",
+    "verb": "GET",
+    "path": "/api/openapi.json",
+    "operation_id": "openapi_schema",
+    "return_type": "dict[str, Any]",
+    "kind": "json"
+  },
+  {
+    "group": "documentation",
+    "method": "swagger_ui_alias",
+    "verb": "GET",
+    "path": "/docs",
+    "operation_id": "swagger_ui",
+    "return_type": "str",
+    "kind": "text"
+  },
+  {
+    "group": "downloads",
+    "method": "download_listing_asset",
+    "verb": "GET",
+    "path": "/files/assets/{asset_id}/{filename}",
+    "operation_id": "download_listing_asset_files_assets__asset_id___filename__get",
+    "return_type": "bytes",
+    "kind": "bytes"
+  },
+  {
+    "group": "downloads",
+    "method": "download_file",
+    "verb": "GET",
+    "path": "/files/{file_id}/{filename}",
+    "operation_id": "download_file_files__file_id___filename__get",
+    "return_type": "bytes",
+    "kind": "bytes"
+  },
+  {
+    "group": "favourites",
+    "method": "active_favourites",
+    "verb": "GET",
+    "path": "/api/favourites",
+    "operation_id": "active_favourites_api_favourites_get",
+    "return_type": "list[models.FavouriteCollectionResponse]",
+    "kind": "json"
+  },
+  {
+    "group": "files",
+    "method": "current_listings",
+    "verb": "GET",
+    "path": "/api/files",
+    "operation_id": "current_listings_api_files_get",
+    "return_type": "list[models.UploadedFileResponse]",
+    "kind": "json"
+  },
+  {
+    "group": "files",
+    "method": "my_files",
+    "verb": "GET",
+    "path": "/api/files/mine",
+    "operation_id": "my_files_api_files_mine_get",
+    "return_type": "list[models.UploadedFileResponse]",
+    "kind": "json"
+  },
+  {
+    "group": "files",
+    "method": "start_upload",
+    "verb": "POST",
+    "path": "/api/files/uploads",
+    "operation_id": "start_upload_api_files_uploads_post",
+    "return_type": "models.UploadSessionResponse",
+    "kind": "json"
+  },
+  {
+    "group": "files",
+    "method": "upload_status",
+    "verb": "GET",
+    "path": "/api/files/uploads/{upload_id}",
+    "operation_id": "upload_status_api_files_uploads__upload_id__get",
+    "return_type": "models.UploadSessionResponse",
+    "kind": "json"
+  },
+  {
+    "group": "files",
+    "method": "upload_chunk",
+    "verb": "PUT",
+    "path": "/api/files/uploads/{upload_id}/chunks/{chunk_index}",
+    "operation_id": "upload_chunk_api_files_uploads__upload_id__chunks__chunk_index__put",
+    "return_type": "models.UploadSessionResponse",
+    "kind": "json"
+  },
+  {
+    "group": "files",
+    "method": "finish_upload",
+    "verb": "POST",
+    "path": "/api/files/uploads/{upload_id}/complete",
+    "operation_id": "finish_upload_api_files_uploads__upload_id__complete_post",
+    "return_type": "models.UploadedFileResponse",
+    "kind": "json"
+  },
+  {
+    "group": "files",
+    "method": "delete_file",
+    "verb": "DELETE",
+    "path": "/api/files/{file_id}",
+    "operation_id": "delete_file_api_files__file_id__delete",
+    "return_type": "None",
+    "kind": "json"
+  },
+  {
+    "group": "files",
+    "method": "file_metadata",
+    "verb": "GET",
+    "path": "/api/files/{file_id}",
+    "operation_id": "file_metadata_api_files__file_id__get",
+    "return_type": "models.UploadedFileResponse",
+    "kind": "json"
+  },
+  {
+    "group": "files",
+    "method": "edit_file",
+    "verb": "PATCH",
+    "path": "/api/files/{file_id}",
+    "operation_id": "edit_file_api_files__file_id__patch",
+    "return_type": "models.UploadedFileResponse",
+    "kind": "json"
+  },
+  {
+    "group": "files",
+    "method": "replace_file_content",
+    "verb": "PUT",
+    "path": "/api/files/{file_id}/content",
+    "operation_id": "replace_file_content_api_files__file_id__content_put",
+    "return_type": "models.UploadedFileResponse",
+    "kind": "json"
+  },
+  {
+    "group": "files",
+    "method": "get_thumbnail",
+    "verb": "GET",
+    "path": "/api/files/{file_id}/thumbnail",
+    "operation_id": "get_thumbnail_api_files__file_id__thumbnail_get",
+    "return_type": "bytes",
+    "kind": "bytes"
+  },
+  {
+    "group": "files",
+    "method": "set_thumbnail",
+    "verb": "PUT",
+    "path": "/api/files/{file_id}/thumbnail",
+    "operation_id": "set_thumbnail_api_files__file_id__thumbnail_put",
+    "return_type": "models.UploadedFileResponse",
+    "kind": "json"
+  },
+  {
+    "group": "health",
+    "method": "health",
+    "verb": "GET",
+    "path": "/api/health",
+    "operation_id": "health_api_health_get",
+    "return_type": "models.StatusResponse",
+    "kind": "json"
+  },
+  {
+    "group": "health",
+    "method": "readiness",
+    "verb": "GET",
+    "path": "/api/ready",
+    "operation_id": "readiness_api_ready_get",
+    "return_type": "models.StatusResponse",
+    "kind": "json"
+  },
+  {
+    "group": "listings",
+    "method": "public_listings",
+    "verb": "GET",
+    "path": "/api/listings",
+    "operation_id": "public_listings_api_listings_get",
+    "return_type": "models.ListingPageResponse",
+    "kind": "json"
+  },
+  {
+    "group": "listings",
+    "method": "new_listing",
+    "verb": "POST",
+    "path": "/api/listings",
+    "operation_id": "new_listing_api_listings_post",
+    "return_type": "models.ListingResponse",
+    "kind": "json"
+  },
+  {
+    "group": "listings",
+    "method": "track_asset_download",
+    "verb": "GET",
+    "path": "/api/listings/assets/{asset_id}/download",
+    "operation_id": "track_asset_download_api_listings_assets__asset_id__download_get",
+    "return_type": "bytes",
+    "kind": "redirect"
+  },
+  {
+    "group": "listings",
+    "method": "catalog_changes",
+    "verb": "GET",
+    "path": "/api/listings/changes",
+    "operation_id": "catalog_changes_api_listings_changes_get",
+    "return_type": "models.ListingChangePageResponse",
+    "kind": "json"
+  },
+  {
+    "group": "listings",
+    "method": "my_listings",
+    "verb": "GET",
+    "path": "/api/listings/mine",
+    "operation_id": "my_listings_api_listings_mine_get",
+    "return_type": "list[models.ListingResponse]",
+    "kind": "json"
+  },
+  {
+    "group": "listings",
+    "method": "my_listing_detail",
+    "verb": "GET",
+    "path": "/api/listings/mine/{listing_id}",
+    "operation_id": "my_listing_detail_api_listings_mine__listing_id__get",
+    "return_type": "models.ListingResponse",
+    "kind": "json"
+  },
+  {
+    "group": "listings",
+    "method": "finish_asset_upload",
+    "verb": "POST",
+    "path": "/api/listings/uploads/{upload_id}/complete",
+    "operation_id": "finish_asset_upload_api_listings_uploads__upload_id__complete_post",
+    "return_type": "models.ListingAssetResponse",
+    "kind": "json"
+  },
+  {
+    "group": "listings",
+    "method": "download_version_archive",
+    "verb": "GET",
+    "path": "/api/listings/versions/{version_id}/download",
+    "operation_id": "download_version_archive_api_listings_versions__version_id__download_get",
+    "return_type": "bytes",
+    "kind": "bytes"
+  },
+  {
+    "group": "listings",
+    "method": "remove_listing",
+    "verb": "DELETE",
+    "path": "/api/listings/{listing_id}",
+    "operation_id": "remove_listing_api_listings__listing_id__delete",
+    "return_type": "None",
+    "kind": "json"
+  },
+  {
+    "group": "listings",
+    "method": "listing_detail",
+    "verb": "GET",
+    "path": "/api/listings/{listing_id}",
+    "operation_id": "listing_detail_api_listings__listing_id__get",
+    "return_type": "models.ListingResponse",
+    "kind": "json"
+  },
+  {
+    "group": "listings",
+    "method": "edit_listing",
+    "verb": "PATCH",
+    "path": "/api/listings/{listing_id}",
+    "operation_id": "edit_listing_api_listings__listing_id__patch",
+    "return_type": "models.ListingResponse",
+    "kind": "json"
+  },
+  {
+    "group": "listings",
+    "method": "upload_gallery_image",
+    "verb": "POST",
+    "path": "/api/listings/{listing_id}/images",
+    "operation_id": "upload_gallery_image_api_listings__listing_id__images_post",
+    "return_type": "models.ListingResponse",
+    "kind": "json"
+  },
+  {
+    "group": "listings",
+    "method": "remove_gallery_image",
+    "verb": "DELETE",
+    "path": "/api/listings/{listing_id}/images/{image_id}",
+    "operation_id": "remove_gallery_image_api_listings__listing_id__images__image_id__delete",
+    "return_type": "None",
+    "kind": "json"
+  },
+  {
+    "group": "listings",
+    "method": "get_gallery_image",
+    "verb": "GET",
+    "path": "/api/listings/{listing_id}/images/{image_id}",
+    "operation_id": "get_gallery_image_api_listings__listing_id__images__image_id__get",
+    "return_type": "bytes",
+    "kind": "bytes"
+  },
+  {
+    "group": "listings",
+    "method": "get_listing_thumbnail",
+    "verb": "GET",
+    "path": "/api/listings/{listing_id}/thumbnail",
+    "operation_id": "get_listing_thumbnail_api_listings__listing_id__thumbnail_get",
+    "return_type": "bytes",
+    "kind": "bytes"
+  },
+  {
+    "group": "listings",
+    "method": "set_listing_thumbnail",
+    "verb": "PUT",
+    "path": "/api/listings/{listing_id}/thumbnail",
+    "operation_id": "set_listing_thumbnail_api_listings__listing_id__thumbnail_put",
+    "return_type": "models.ListingResponse",
+    "kind": "json"
+  },
+  {
+    "group": "listings",
+    "method": "new_version",
+    "verb": "POST",
+    "path": "/api/listings/{listing_id}/versions",
+    "operation_id": "new_version_api_listings__listing_id__versions_post",
+    "return_type": "models.ListingResponse",
+    "kind": "json"
+  },
+  {
+    "group": "listings",
+    "method": "remove_version",
+    "verb": "DELETE",
+    "path": "/api/listings/{listing_id}/versions/{version_id}",
+    "operation_id": "remove_version_api_listings__listing_id__versions__version_id__delete",
+    "return_type": "None",
+    "kind": "json"
+  },
+  {
+    "group": "listings",
+    "method": "edit_version_metadata",
+    "verb": "PATCH",
+    "path": "/api/listings/{listing_id}/versions/{version_id}",
+    "operation_id": "edit_version_metadata_api_listings__listing_id__versions__version_id__patch",
+    "return_type": "models.ListingResponse",
+    "kind": "json"
+  },
+  {
+    "group": "listings",
+    "method": "remove_draft_asset",
+    "verb": "DELETE",
+    "path": "/api/listings/{listing_id}/versions/{version_id}/assets/{asset_id}",
+    "operation_id": "remove_draft_asset_api_listings__listing_id__versions__version_id__assets__asset_id__delete",
+    "return_type": "None",
+    "kind": "json"
+  },
+  {
+    "group": "listings",
+    "method": "edit_version_compatibility",
+    "verb": "PUT",
+    "path": "/api/listings/{listing_id}/versions/{version_id}/compatibility",
+    "operation_id": "edit_version_compatibility_api_listings__listing_id__versions__version_id__compatibility_put",
+    "return_type": "models.ListingVersionResponse",
+    "kind": "json"
+  },
+  {
+    "group": "listings",
+    "method": "release_manifest",
+    "verb": "GET",
+    "path": "/api/listings/{listing_id}/versions/{version_id}/manifest",
+    "operation_id": "release_manifest_api_listings__listing_id__versions__version_id__manifest_get",
+    "return_type": "models.ReleaseManifestResponse",
+    "kind": "json"
+  },
+  {
+    "group": "listings",
+    "method": "publish_listing_version",
+    "verb": "POST",
+    "path": "/api/listings/{listing_id}/versions/{version_id}/publish",
+    "operation_id": "publish_listing_version_api_listings__listing_id__versions__version_id__publish_post",
+    "return_type": "models.ListingResponse",
+    "kind": "json"
+  },
+  {
+    "group": "listings",
+    "method": "new_asset_upload",
+    "verb": "POST",
+    "path": "/api/listings/{listing_id}/versions/{version_id}/uploads",
+    "operation_id": "new_asset_upload_api_listings__listing_id__versions__version_id__uploads_post",
+    "return_type": "models.UploadSessionResponse",
+    "kind": "json"
+  },
+  {
+    "group": "listings",
+    "method": "listing_workshop",
+    "verb": "GET",
+    "path": "/api/listings/{listing_id}/workshop",
+    "operation_id": "listing_workshop_api_listings__listing_id__workshop_get",
+    "return_type": "models.WorkshopModsResponse",
+    "kind": "json"
+  },
+  {
+    "group": "ratings",
+    "method": "remove_rating",
+    "verb": "DELETE",
+    "path": "/api/listings/{listing_id}/rating",
+    "operation_id": "remove_rating_api_listings__listing_id__rating_delete",
+    "return_type": "None",
+    "kind": "json"
+  },
+  {
+    "group": "ratings",
+    "method": "my_rating",
+    "verb": "GET",
+    "path": "/api/listings/{listing_id}/rating",
+    "operation_id": "my_rating_api_listings__listing_id__rating_get",
+    "return_type": "models.RatingResponse | None",
+    "kind": "json"
+  },
+  {
+    "group": "ratings",
+    "method": "update_rating",
+    "verb": "PUT",
+    "path": "/api/listings/{listing_id}/rating",
+    "operation_id": "update_rating_api_listings__listing_id__rating_put",
+    "return_type": "models.RatingResponse",
+    "kind": "json"
+  },
+  {
+    "group": "user",
+    "method": "current_user",
+    "verb": "GET",
+    "path": "/api/user/me",
+    "operation_id": "current_user_api_user_me_get",
+    "return_type": "models.UserResponse",
+    "kind": "json"
+  },
+  {
+    "group": "user",
+    "method": "update_current_user",
+    "verb": "PATCH",
+    "path": "/api/user/me",
+    "operation_id": "update_current_user_api_user_me_patch",
+    "return_type": "models.UserProfileUpdateResponse",
+    "kind": "json"
+  },
+  {
+    "group": "user",
+    "method": "delete_current_avatar",
+    "verb": "DELETE",
+    "path": "/api/user/me/avatar",
+    "operation_id": "delete_current_avatar_api_user_me_avatar_delete",
+    "return_type": "models.UserResponse",
+    "kind": "json"
+  },
+  {
+    "group": "user",
+    "method": "set_current_avatar",
+    "verb": "PUT",
+    "path": "/api/user/me/avatar",
+    "operation_id": "set_current_avatar_api_user_me_avatar_put",
+    "return_type": "models.UserResponse",
+    "kind": "json"
+  },
+  {
+    "group": "user",
+    "method": "update_current_password",
+    "verb": "PUT",
+    "path": "/api/user/me/password",
+    "operation_id": "update_current_password_api_user_me_password_put",
+    "return_type": "models.StatusResponse",
+    "kind": "json"
+  },
+  {
+    "group": "users",
+    "method": "public_profile",
+    "verb": "GET",
+    "path": "/api/users/{username}",
+    "operation_id": "public_profile_api_users__username__get",
+    "return_type": "models.PublicProfileResponse",
+    "kind": "json"
+  },
+  {
+    "group": "users",
+    "method": "public_avatar",
+    "verb": "GET",
+    "path": "/api/users/{username}/avatar",
+    "operation_id": "public_avatar_api_users__username__avatar_get",
+    "return_type": "bytes",
+    "kind": "bytes"
+  },
+  {
+    "group": "website",
+    "method": "active_announcement",
+    "verb": "GET",
+    "path": "/api/public/announcement",
+    "operation_id": "active_announcement_api_public_announcement_get",
+    "return_type": "models.AnnouncementResponse | None",
+    "kind": "json"
+  },
+  {
+    "group": "website",
+    "method": "public_image",
+    "verb": "GET",
+    "path": "/api/public/announcement/image/{image_id}",
+    "operation_id": "public_image_api_public_announcement_image__image_id__get",
+    "return_type": "bytes",
+    "kind": "bytes"
+  },
+  {
+    "group": "website",
+    "method": "active_favourites",
+    "verb": "GET",
+    "path": "/api/public/favourites",
+    "operation_id": "active_favourites_api_public_favourites_get",
+    "return_type": "list[models.FavouriteCollectionResponse]",
+    "kind": "json"
+  },
+  {
+    "group": "website",
+    "method": "public_listings",
+    "verb": "GET",
+    "path": "/api/public/listings",
+    "operation_id": "public_listings_api_public_listings_get",
+    "return_type": "models.ListingPageResponse",
+    "kind": "json"
+  },
+  {
+    "group": "website",
+    "method": "listing_detail",
+    "verb": "GET",
+    "path": "/api/public/listings/{listing_id}",
+    "operation_id": "listing_detail_api_public_listings__listing_id__get",
+    "return_type": "models.ListingResponse",
+    "kind": "json"
+  },
+  {
+    "group": "website",
+    "method": "view_listing",
+    "verb": "POST",
+    "path": "/api/public/listings/{listing_id}/view",
+    "operation_id": "view_listing_api_public_listings__listing_id__view_post",
+    "return_type": "models.ListingViewResponse",
+    "kind": "json"
+  },
+  {
+    "group": "website",
+    "method": "listing_workshop",
+    "verb": "GET",
+    "path": "/api/public/listings/{listing_id}/workshop",
+    "operation_id": "listing_workshop_api_public_listings__listing_id__workshop_get",
+    "return_type": "models.WorkshopModsResponse",
+    "kind": "json"
+  },
+  {
+    "group": "website",
+    "method": "visit_site",
+    "verb": "POST",
+    "path": "/api/public/site-visit",
+    "operation_id": "visit_site_api_public_site_visit_post",
+    "return_type": "None",
+    "kind": "json"
+  }
+]

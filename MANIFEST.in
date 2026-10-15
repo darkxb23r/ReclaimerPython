@@ -1,0 +1,7 @@
+include README.md
+exclude test_api.py
+recursive-include docs *.md *.json *.txt
+recursive-include examples *.py
+recursive-include tests *.py
+recursive-include tools *.py
+include src/reclaimerforge/py.typed
